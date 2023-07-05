@@ -1,0 +1,38 @@
+<div class="container-navbar">
+  <div class="menu-mobile" *ngIf="!home">
+    <img
+      class="img-filtro"
+      src="assets/imagePages/Menu Hamburger.svg"
+      (click)="abrirMenuMobile($event)"
+    />
+  </div>
+
+  <div class="conteudo-navbar">
+    <img
+      class="logo-pages"
+      src="assets/imagePages/logo-pequeno.svg"
+      (click)="goBackHome()"
+    />
+
+    <div class="titulo-page" *ngIf="!home">
+      <div class="barra-divisora"></div>
+
+      <a
+        ><div class="titulo-page-item">{{ "navbar.menu1" | translate }}</div></a
+      >
+      <a (click)="redirect(1)"
+        ><div class="titulo-page-item">{{ "navbar.menu2" | translate }}</div></a
+      >
+      <a
+        ><div class="titulo-page-item">{{ "navbar.menu3" | translate }}</div></a
+      >
+      <a
+        ><div class="titulo-page-item">{{ "navbar.menu4" | translate }}</div></a
+      >
+    </div>
+  </div>
+  <div class="elementos-login">
+    <div class="barra-divisora-login"></div>
+    <div class="cirulo-login">RS</div>
+  </div>
+</div>
