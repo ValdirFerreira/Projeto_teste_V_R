@@ -112,6 +112,10 @@ export class NavbarComponent implements OnInit {
   redirect(codPage: number) {
 
     switch (codPage) {
+      case 0:
+        this.router.navigate(['/cadastro']);    
+        break;
+
       case 1:
         this.router.navigate(['/pesquisa']);    
         break;

@@ -1,0 +1,114 @@
+<app-navbar></app-navbar>
+
+
+
+<div class="container-dashboard">
+
+    <div class="container-tela">
+
+
+        <div class="form-cadastro">
+            <div class="menu-center">
+
+                <div class="menu-desc-select">Dados Pessoais</div>
+                <div class="menu-desc-neutro">Observações</div>
+                <div class="menu-desc-neutro">Documentos</div>
+
+            </div>
+
+
+            <div class="container-dados">
+                <div class="titulo-tela">
+                    Dados Pessoais
+                </div>
+                <div class="sub-titulo-tela">
+                    Lorem ipsum dolor sit amet consectetur amet
+                </div>
+
+                <div class="content-tela">
+                    <div class="row-content">
+                        <mat-form-field class="input-medio" appearance="fill">
+                            <mat-label>Código / ID</mat-label>
+                            <input  matInput>
+                          </mat-form-field>
+                          
+                          <mat-form-field class="input-medio" appearance="fill">
+                            <mat-label>Data Cadastro</mat-label>
+                            <input type="date"  matInput>
+                          </mat-form-field>
+
+                          <mat-form-field class="input-medio" appearance="fill">
+                            <mat-label>CPF</mat-label>
+                            <input  matInput>
+                          </mat-form-field>
+                    </div>
+
+                    <div class="row-content">
+                        <mat-form-field  class="input-grande" appearance="fill">
+                            <mat-label>Nome</mat-label>
+                            <input  matInput>
+                          </mat-form-field>
+
+                    
+                          <mat-form-field  class="input-medio" appearance="fill">
+                            <mat-label>Gênero</mat-label>
+                            <mat-select [(value)]="selected">
+                              <mat-option>None</mat-option>
+                              <mat-option value="option1">Option 1</mat-option>
+                              <mat-option value="option2">Option 2</mat-option>
+                              <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+
+                    </div>
+
+                    <div class="row-content">
+                        <mat-form-field  class="input-pequeno" appearance="fill">
+                            <mat-label>RG</mat-label>
+                            <input  matInput>
+                          </mat-form-field>
+
+                          <mat-form-field  class="input-pequeno" appearance="fill">
+                            <mat-label>Instrução Básica</mat-label>
+                            <input  matInput>
+                          </mat-form-field>
+
+
+                          <mat-form-field  class="input-pequeno" appearance="fill">
+                            <mat-label>Status</mat-label>
+                            <mat-select [(value)]="selected">
+                              <mat-option>None</mat-option>
+                              <mat-option value="option1">Option 1</mat-option>
+                              <mat-option value="option2">Option 2</mat-option>
+                              <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+
+
+                          <mat-form-field  class="input-pequeno" appearance="fill">
+                            <mat-label>Login</mat-label>
+                            <input  matInput>
+                          </mat-form-field>
+
+                       
+
+                          <mat-form-field  class="input-pequeno" appearance="fill">
+                            <mat-label>Cati</mat-label>
+                            <mat-select [(value)]="selected">
+                              <mat-option>None</mat-option>
+                              <mat-option value="option1">Option 1</mat-option>
+                              <mat-option value="option2">Option 2</mat-option>
+                              <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                       
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

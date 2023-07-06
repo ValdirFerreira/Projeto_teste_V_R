@@ -1,0 +1,120 @@
+.form-cadastro {
+}
+
+.menu-center {
+    padding-top: 16px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    max-width: 650px;
+
+
+    .menu-desc-select {
+        color: var(--neutral-01, #12131a);
+        /* Headline/H500 */
+        // font-family: DM Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        border-bottom: 2px solid var(--neutral-01, #12131a);
+        height: 36px;
+        width: 150px;
+    }
+
+    .menu-desc-neutro {
+        color: var(--neutral-02, #696c80);
+        /* Paragraph/P3 */
+        // font-family: DM Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        height: 36px;
+        width: 150px;
+        cursor: pointer;
+    }
+}
+
+.container-dados {
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    max-width: 650px;
+
+    .titulo-tela {
+        color: var(--neutral-01, #12131a);
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 132%;
+        padding-top: 24px;
+    }
+
+    .sub-titulo-tela {
+        color: var(--neutral-02, #696c80);
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    .content-tela {
+        padding-top: 16px;
+        display: grid;
+        justify-content: start;
+        align-items: center;
+
+        .row-content {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding-bottom: 16px;
+        }
+    }
+}
+
+.input-base,
+.input-pequeno,
+.input-medio,
+.input-grande {
+    border-radius: 6px;
+    border: 1px solid var(--neutral-04, #bbbdcc);
+    background: var(--background-main, #fff);
+    height: 48px;
+    margin-right: 16px;
+}
+
+.input-pequeno {
+    width: 113px;
+}
+
+.input-medio {
+    width: 199px;
+}
+
+.input-grande {
+    width: 418px !important;
+}
+
+
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: transparent !important;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
+::ng-deep .mat-form-field-label-wrapper {
+    font-size: 14px !important;
+    // top: 6px !important;
+    // left: 3px !important;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 0px 0.75em 0 0px !important;
+}

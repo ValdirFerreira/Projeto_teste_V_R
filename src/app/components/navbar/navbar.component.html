@@ -17,7 +17,7 @@
     <div class="titulo-page" *ngIf="!home">
       <div class="barra-divisora"></div>
 
-      <a
+      <a (click)="redirect(0)"
         ><div class="titulo-page-item">{{ "navbar.menu1" | translate }}</div></a
       >
       <a (click)="redirect(1)"
