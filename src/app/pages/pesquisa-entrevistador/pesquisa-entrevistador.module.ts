@@ -15,6 +15,7 @@ import * as data from 'highcharts/modules/data.src';
 import { FooterBottomModule } from 'src/app/components/footer-bottom/footer-bottom.module';
 import { PesquisaEntrevistadorComponent } from './pesquisa-entrevistador.component';
 import { PesquisaEntrevistadorRoutingModule } from './pesquisa-entrevistador-routing.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { PesquisaEntrevistadorRoutingModule } from './pesquisa-entrevistador-rou
     AvisoSemDadosModule,
     ChartModule,
     FooterBottomModule,
+    TranslateModule,
   ]
 })
 export class PesquisaEntrevistadorModule { }
