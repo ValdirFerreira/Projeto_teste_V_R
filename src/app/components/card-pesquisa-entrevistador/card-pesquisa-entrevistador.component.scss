@@ -1,0 +1,73 @@
+.formulario-result {
+  padding-top: 40px;
+  .conteiner-result {
+      height: 400px;
+      overflow-y: auto;
+      .card-info {
+          display: flex;
+          width: 650px;
+          padding: 24px 16px;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 6px;
+           border: 1px solid gray;
+          background: #fefefe;
+          margin-bottom: 8px;
+      }
+
+      .ball-status {
+          width: 16px;
+          height: 16px;
+          background: gray;
+          border-radius: 100%;
+      }
+
+      .avatar-user {
+          width: 56px;
+          height: 56px;
+          border-radius: 8px;
+          background: gray;
+      }
+
+      .info-user {
+      }
+
+      .user-name {
+          color: var(--neutral-01, #12131a);
+          font-family: Poppins;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 140%;
+      }
+
+      .desc-status {
+          color: var(--neutral-01, #12131a);
+          font-family: Poppins;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+      }
+
+      .desc-info-user {
+          overflow: hidden;
+          color: var(--neutral-01, #12131a);
+          text-overflow: ellipsis;
+          flex-wrap: nowrap;
+          font-family: Poppins;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+      }
+
+      .card-options {
+          background-image: url(../../../assets/icones/icone-options.svg);
+          background-repeat: no-repeat !important;
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+      }
+  }
+}

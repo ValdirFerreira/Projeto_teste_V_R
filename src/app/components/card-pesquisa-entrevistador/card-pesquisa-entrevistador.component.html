@@ -1,0 +1,34 @@
+<div class="formulario-result">
+  <div class="conteiner-result">
+
+      <ng-container *ngFor="let item  of listEntrevistador; let i = index">
+
+          <div class="card-info"  [ngStyle]="{ border:'1px solid' + item.Cor}">
+
+              <div class="ball-status" [ngStyle]="{ background: item.Cor}"></div>
+          
+              <div class="avatar-user"></div>
+              <div class="info-user">
+
+                  <div class="user-name">
+                    {{item.Nome}}
+                  </div>
+
+                  <div class="desc-status">
+                    {{item.DescStatus}}
+                  </div>
+
+              </div>
+
+              <div class="desc-info-user">
+                  {{item.Observacao}}
+              </div>
+
+              <div class="card-options"></div>
+
+          </div>
+
+      </ng-container>
+
+  </div>
+</div>

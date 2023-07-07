@@ -4,7 +4,7 @@
 }
 
 .titulo-page {
-    color: var(--neutral-01, #12131A);
+    color: var(--neutral-01, #12131a);
     font-family: Poppins;
     font-size: 24px;
     font-style: normal;
@@ -14,7 +14,7 @@
 }
 
 .sub-titulo {
-    color: var(--neutral-02, #696C80);
+    color: var(--neutral-02, #696c80);
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
@@ -27,30 +27,29 @@
     display: flex;
     align-items: center;
     margin: 24px 0 24px 0;
-    
 }
 
 #busca-cpf {
     width: 160px;
     padding: 14px 12px;
     border-radius: 6px;
-    border: 1px solid var(--neutral-04, #BBBDCC);
-    background: var(--background-alternative, #F9FBFC);
+    border: 1px solid var(--neutral-04, #bbbdcc);
+    background: var(--background-alternative, #f9fbfc);
 }
 
 #busca-nome {
     width: 474px;
     padding: 14px 12px;
     border-radius: 6px;
-    border: 1px solid var(--neutral-04, #BBBDCC);
-    background: var(--background-alternative, #F9FBFC);
+    border: 1px solid var(--neutral-04, #bbbdcc);
+    background: var(--background-alternative, #f9fbfc);
     margin-left: 12px;
 }
 
 .linha-horizontal {
     width: 100%;
     height: 1px;
-    background-color: #D8D8D8;
+    background-color: #d8d8d8;
     margin: 0 0 12px 0;
 }
 
@@ -59,19 +58,25 @@
     height: 48px;
     padding: 16px 20px;
     border-radius: 6px;
-    background: #A0BBE9;
+   background: #4193C0;;
     align-items: center;
     justify-content: center;
 
-    color: #FEFEFE;
+    color: #fefefe;
     text-align: center;
-    font-family: DM Sans;
+    // font-family: DM Sans;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 16px;
     border: none;
     margin-left: auto;
-
     cursor: pointer;
 }
+
+.btn-busca-off
+{
+    background: #a0bbe9 !important;
+}
+
+

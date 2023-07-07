@@ -8,6 +8,7 @@ import { EventEmitterService } from 'src/app/services/event-emitter.service';
 import { TranslateService } from '@ngx-translate/core';
 import { ConversorPowerpointService } from 'src/app/services/conversor-powerpoint.service';
 import { LogService } from 'src/app/services/log.service';
+import { Entrevistador } from 'src/app/models/pesquisa-entrevistador/entrevistador';
 
 
 
@@ -27,29 +28,79 @@ export class PesquisaEntrevistadorComponent implements OnInit {
   ) { }
 
 
-  paginaAtiva :boolean = true;
+  paginaAtiva: boolean = true;
+  listEntrevistador: Array<Entrevistador>;
+  CPF:string;
 
   ngOnInit(): void {
 
-    window.scroll({ 
-      top: 0, 
-      left: 0, 
-      behavior: 'smooth' 
-});
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
 
     this.menuService.nomePage = this.translate.instant('navbar.dashboard-one');
     this.checkDevice();
 
-    EventEmitterService.get("emit-dashboard-one").subscribe((x) => { 
-        this.checkDevice();      
-        this.logService.GravaLogRota(this.router.url).subscribe(
-          );
+
+
+
+    EventEmitterService.get("emit-dashboard-one").subscribe((x) => {
+      this.checkDevice();
+      this.logService.GravaLogRota(this.router.url).subscribe(
+      );
     })
 
     this.menuService.activeMenu = 1;
     this.menuService.menuSelecao = "1"
- 
+
   }
+
+
+
+
+  carregaEntrevistador() {
+    var list = [];
+
+    var contStatus = 0;
+
+    for (let index = 0; index < 10; index++) {
+      var item = new Entrevistador();
+
+      item.DescStatus = "Apto" + index;
+      item.Nome = "Ariane da Silva" + index;
+      item.Observacao = "Entrevistador apto para início do projeto" + index;
+      item.Status = contStatus;
+
+      debugger
+      if (contStatus == 0) {
+        item.Cor = "#429777";
+      }
+
+      if (contStatus == 1) {
+        item.Cor = "#F8CA10";
+      }
+
+      if (contStatus == 2) {
+        item.Cor = "#D14343";
+      }
+
+      list.push(item)
+
+      contStatus++;
+      if (contStatus == 3)
+        contStatus = 0;
+
+    
+
+    }
+
+    this.listEntrevistador = list;
+  }
+
+
+
 
 
   checkDevice() {

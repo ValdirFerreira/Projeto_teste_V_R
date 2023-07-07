@@ -16,6 +16,8 @@ import { FooterBottomModule } from 'src/app/components/footer-bottom/footer-bott
 import { PesquisaEntrevistadorComponent } from './pesquisa-entrevistador.component';
 import { PesquisaEntrevistadorRoutingModule } from './pesquisa-entrevistador-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { CardPesquisaEntrevistadorModule } from 'src/app/components/card-pesquisa-entrevistador/card-pesquisa-entrevistador.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { TranslateModule } from '@ngx-translate/core';
     ChartModule,
     FooterBottomModule,
     TranslateModule,
+    CardPesquisaEntrevistadorModule,
+    FormsModule ,
   ]
 })
 export class PesquisaEntrevistadorModule { }

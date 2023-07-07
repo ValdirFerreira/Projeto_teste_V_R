@@ -3,24 +3,34 @@
 
 
 <div class="container-dashboard">
-    
+
     <div class="container-tela">
         <div class="formulario-busca">
-            
+
             <div class="titulo-page">{{ "pesquisa-entrevistador.titulo1" | translate }}</div>
             <div class="sub-titulo">{{ "pesquisa-entrevistador.subtitulo" | translate }}</div>
 
             <div class="inputs-busca">
-                <input type="text" maxlength="11" id="busca-cpf" placeholder="{{'pesquisa-entrevistador.placeholdercpf' | translate}}">
-                <input type="text" id="busca-nome" placeholder="{{'pesquisa-entrevistador.placeholdernome' | translate}}">
+                <input type="text" maxlength="11" id="busca-cpf" [(ngModel)]="CPF"
+                    placeholder="{{'pesquisa-entrevistador.placeholdercpf' | translate}}">
+                <input type="text" id="busca-nome"
+                    placeholder="{{'pesquisa-entrevistador.placeholdernome' | translate}}">
             </div>
 
             <div class="linha-horizontal"></div>
-            <button id="btn-busca">{{ "pesquisa-entrevistador.textobotaobusca" | translate}}</button>
+            <button (click)="carregaEntrevistador()" id="btn-busca" [ngClass]="{'btn-busca-off': !CPF ,'' : CPF}" >{{ "pesquisa-entrevistador.textobotaobusca" | translate}}</button>
+
+
+            <div>
+                <card-pesquisa-entrevistador [listEntrevistador]="listEntrevistador"></card-pesquisa-entrevistador>
+            </div>
 
         </div>
-        
+
+
+
+
+
     </div>
 
 </div>
-
