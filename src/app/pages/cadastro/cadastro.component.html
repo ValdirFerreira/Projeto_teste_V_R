@@ -4,111 +4,166 @@
 
 <div class="container-dashboard">
 
-    <div class="container-tela">
+  <div class="container-tela">
 
 
-        <div class="form-cadastro">
-            <div class="menu-center">
+    <div class="form-cadastro">
+      <div class="menu-center">
 
-                <div class="menu-desc-select">Dados Pessoais</div>
-                <div class="menu-desc-neutro">Observações</div>
-                <div class="menu-desc-neutro">Documentos</div>
+        <div [ngClass]="{'menu-desc-select': menuAtivo==1, 'menu-desc-neutro':menuAtivo!=1}" (click)="menuAtivo=1"
+          class="menu-desc-select">Dados Pessoais</div>
+        <div [ngClass]="{'menu-desc-select': menuAtivo==2, 'menu-desc-neutro':menuAtivo!=2}" (click)="menuAtivo=2"
+          class="menu-desc-neutro">Observações</div>
+        <div [ngClass]="{'menu-desc-select': menuAtivo==3, 'menu-desc-neutro':menuAtivo!=3}" (click)="menuAtivo=3"
+          class="menu-desc-neutro">Documentos</div>
 
-            </div>
-
-
-            <div class="container-dados">
-                <div class="titulo-tela">
-                    Dados Pessoais
-                </div>
-                <div class="sub-titulo-tela">
-                    Lorem ipsum dolor sit amet consectetur amet
-                </div>
-
-                <div class="content-tela">
-                    <div class="row-content">
-                        <mat-form-field class="input-medio" appearance="fill">
-                            <mat-label>Código / ID</mat-label>
-                            <input  matInput>
-                          </mat-form-field>
-                          
-                          <mat-form-field class="input-medio" appearance="fill">
-                            <mat-label>Data Cadastro</mat-label>
-                            <input type="date"  matInput>
-                          </mat-form-field>
-
-                          <mat-form-field class="input-medio" appearance="fill">
-                            <mat-label>CPF</mat-label>
-                            <input  matInput>
-                          </mat-form-field>
-                    </div>
-
-                    <div class="row-content">
-                        <mat-form-field  class="input-grande" appearance="fill">
-                            <mat-label>Nome</mat-label>
-                            <input  matInput>
-                          </mat-form-field>
-
-                    
-                          <mat-form-field  class="input-medio" appearance="fill">
-                            <mat-label>Gênero</mat-label>
-                            <mat-select [(value)]="selected">
-                              <mat-option>None</mat-option>
-                              <mat-option value="option1">Option 1</mat-option>
-                              <mat-option value="option2">Option 2</mat-option>
-                              <mat-option value="option3">Option 3</mat-option>
-                            </mat-select>
-                          </mat-form-field>
-
-                    </div>
-
-                    <div class="row-content">
-                        <mat-form-field  class="input-pequeno" appearance="fill">
-                            <mat-label>RG</mat-label>
-                            <input  matInput>
-                          </mat-form-field>
-
-                          <mat-form-field  class="input-pequeno" appearance="fill">
-                            <mat-label>Instrução Básica</mat-label>
-                            <input  matInput>
-                          </mat-form-field>
+      </div>
 
 
-                          <mat-form-field  class="input-pequeno" appearance="fill">
-                            <mat-label>Status</mat-label>
-                            <mat-select [(value)]="selected">
-                              <mat-option>None</mat-option>
-                              <mat-option value="option1">Option 1</mat-option>
-                              <mat-option value="option2">Option 2</mat-option>
-                              <mat-option value="option3">Option 3</mat-option>
-                            </mat-select>
-                          </mat-form-field>
+      <div *ngIf="menuAtivo==1" class="container-dados">
+        <div class="titulo-tela">
+          Dados Pessoais
+        </div>
+        <div class="sub-titulo-tela">
+          Lorem ipsum dolor sit amet consectetur amet
+        </div>
+
+        <div class="content-tela">
+          <div class="row-content">
+            <mat-form-field class="input-medio" appearance="fill">
+              <mat-label>Código / ID</mat-label>
+              <input matInput>
+            </mat-form-field>
+
+            <mat-form-field class="input-medio" appearance="fill">
+              <mat-label>Data Cadastro</mat-label>
+              <input type="date" matInput>
+            </mat-form-field>
+
+            <mat-form-field class="input-medio" appearance="fill">
+              <mat-label>CPF</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+
+          <div class="row-content">
+            <mat-form-field class="input-grande" appearance="fill">
+              <mat-label>Nome</mat-label>
+              <input matInput>
+            </mat-form-field>
 
 
-                          <mat-form-field  class="input-pequeno" appearance="fill">
-                            <mat-label>Login</mat-label>
-                            <input  matInput>
-                          </mat-form-field>
+            <mat-form-field class="input-medio" appearance="fill">
+              <mat-label>Gênero</mat-label>
+              <mat-select [(value)]="selected">
+                <mat-option>None</mat-option>
+                <mat-option value="option1">Option 1</mat-option>
+                <mat-option value="option2">Option 2</mat-option>
+                <mat-option value="option3">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
 
-                       
+          </div>
 
-                          <mat-form-field  class="input-pequeno" appearance="fill">
-                            <mat-label>Cati</mat-label>
-                            <mat-select [(value)]="selected">
-                              <mat-option>None</mat-option>
-                              <mat-option value="option1">Option 1</mat-option>
-                              <mat-option value="option2">Option 2</mat-option>
-                              <mat-option value="option3">Option 3</mat-option>
-                            </mat-select>
-                          </mat-form-field>
-                       
-                    </div>
-                </div>
+          <div class="row-content">
+            <mat-form-field class="input-pequeno" appearance="fill">
+              <mat-label>RG</mat-label>
+              <input matInput>
+            </mat-form-field>
 
-            </div>
+            <mat-form-field class="input-pequeno" appearance="fill">
+              <mat-label>Instrução Básica</mat-label>
+              <input matInput>
+            </mat-form-field>
+
+
+            <mat-form-field class="input-pequeno" appearance="fill">
+              <mat-label>Status</mat-label>
+              <mat-select [(value)]="selected">
+                <mat-option>None</mat-option>
+                <mat-option value="option1">Option 1</mat-option>
+                <mat-option value="option2">Option 2</mat-option>
+                <mat-option value="option3">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+
+            <mat-form-field class="input-pequeno" appearance="fill">
+              <mat-label>Login</mat-label>
+              <input matInput>
+            </mat-form-field>
+
+
+
+            <mat-form-field class="input-pequeno" appearance="fill">
+              <mat-label>Cati</mat-label>
+              <mat-select [(value)]="selected">
+                <mat-option>None</mat-option>
+                <mat-option value="option1">Option 1</mat-option>
+                <mat-option value="option2">Option 2</mat-option>
+                <mat-option value="option3">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div *ngIf="menuAtivo==2" class="container-dados">
+        <div class="titulo-tela">
+          Observações
+        </div>
+        <div class="sub-titulo-tela">
+          Lorem ipsum dolor sit amet consectetur amet
+        </div>
+
+        <div class="content-tela">
+          <div class="row-content">
+            <textarea class="text-area-obs">
+
+                     </textarea>
+
+          </div>
+          <div class="info-input">
+            170/300 caracteres
+          </div>
+
 
         </div>
 
+      </div>
+
+      <div *ngIf="menuAtivo==3" class="container-dados">
+        <div class="titulo-tela">
+          Documentos
+        </div>
+        <div class="sub-titulo-tela">
+          Lorem ipsum dolor sit amet consectetur amet
+        </div>
+
+        <div class="content-tela">
+          <div class="row-content">
+            <div class="card-file">
+
+              <div class="icone-file"></div>
+              <div class="desc-card-file">Arraste e solte sua imagem aqui ou</div>
+              <div class="desc-click-file">Selecione um arquivo</div>
+
+            </div>
+
+          </div>
+          <div class="info-input">
+            Suportado apenas arquivos em PDF com máximo de 30mb.
+          </div>
+
+
+        </div>
+
+      </div>
+
     </div>
+
+  </div>
 
 </div>
