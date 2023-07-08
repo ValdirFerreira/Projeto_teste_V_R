@@ -28,8 +28,9 @@ export class CadastroComponent implements OnInit {
 
 
   paginaAtiva :boolean = true;
-
   selected = 'option2';
+
+  menuAtivo:number =1;
 
   ngOnInit(): void {
 
