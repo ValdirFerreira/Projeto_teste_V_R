@@ -119,7 +119,9 @@ export class NavbarComponent implements OnInit {
       case 1:
         this.router.navigate(['/pesquisa']);    
         break;
-    
+      case 2:
+        this.router.navigate(['/aprovacao']);
+        break;
       default:
         break;
     }
